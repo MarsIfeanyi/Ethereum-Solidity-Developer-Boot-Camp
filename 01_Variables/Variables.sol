@@ -39,7 +39,7 @@ integer, string, bool, bytes arrays, enum, struct, mapping (dictionary in python
     //arrays - combination of same type of data E.g, names of students in a class
     string[] public students = ["Mars", "Ifeanyi"]; //dynamic array
     string[10] public students2; //fixed length arrays.[10], implies you can only store a maximum of 10 names in the array
-    int256[] public sampleint = [1, 2, 3, 4];
+    uint256[] public sampleint = [1, 2, 3, 4];
     // The concept push, pop, length in array, are possible in solidity also
 
     //MAPPING
