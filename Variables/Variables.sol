@@ -1,6 +1,6 @@
 // VARIABLES IN SOLIDITY
 
-pragma solidity 0.6.12;
+pragma solidity >=0.7.0 <0.9.0; /* Pragma Is the directive used to specify the version of compiler for your solidity*/
 
 contract Basics {
     /* Solidity has the following varaiable data types:
