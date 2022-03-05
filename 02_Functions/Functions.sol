@@ -36,7 +36,7 @@ integer, string, bool, bytes arrays, enum, struct, mapping (dictionary in python
 
     string[] public students = ["Mars", "Ifeanyi"]; //dynamic array
     string[15] public students2; //fixed length arrays
-    int256[] public sampleint = [1, 2, 3, 4];
+    uint256[] public sampleint = [1, 2, 3, 4];
     // The concept push, pop, length in array, are possible in solidity also
 
     //MAPPING
