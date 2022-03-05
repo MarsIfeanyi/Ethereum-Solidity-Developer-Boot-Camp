@@ -19,10 +19,6 @@ integer, string, bool, bytes arrays, enum, struct, mapping (dictionary in python
 
     uint8 public d = 30;
     uint256 public e = 19;
-
-    //ADDRESS
-    address payable public investor;
-
     //STRING
     string public name = "Mars"; //default is ""
 
@@ -41,7 +37,7 @@ integer, string, bool, bytes arrays, enum, struct, mapping (dictionary in python
 
     string[] public students = ["Mars", "Ifeanyi"]; //dynamic array
     string[15] public students2; //fixed length arrays
-    int256[] public sampleint = [1, 2, 3, 4];
+    uint256[] public sampleint = [1, 2, 3, 4];
     // The concept push, pop, length in array, are possible in solidity also
 
     //MAPPING
@@ -138,6 +134,10 @@ integer, string, bool, bytes arrays, enum, struct, mapping (dictionary in python
         //do something
     }
 
+    //ADDRESS
+    address payable public investor;
+    address payable public investor2;
+
     function getbalance() public view returns (uint256) {
         /**To return the balance of a contract, you will say address(this),ie address of this particular contract */
         return address(this).balance;
@@ -145,9 +145,9 @@ integer, string, bool, bytes arrays, enum, struct, mapping (dictionary in python
 
     //To Send money to an address from the contract the address need to be payable
     function sendMoney() public {
-        investor = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2;
+        investor = payable(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
         investor.transfer(2 ether);
-        address payable investor2 = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
+        investor2 = payable(0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db);
         investor2.transfer(1.5 ether);
     }
 }
